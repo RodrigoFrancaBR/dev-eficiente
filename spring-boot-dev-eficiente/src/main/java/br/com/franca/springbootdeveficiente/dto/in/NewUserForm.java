@@ -1,6 +1,7 @@
 package br.com.franca.springbootdeveficiente.dto.in;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -14,9 +15,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import java.time.LocalDate;
 
-@ToString
-@Setter
+@Data
 public class NewUserForm {
+
     @NotBlank(message = "Não permite valor em branco nem nulo")
     private String name;
 
